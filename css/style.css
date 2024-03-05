@@ -1,10 +1,13 @@
 :root {
   --color-principal-yellow: #FE9E0D;
+  --color-secondary-yellow: #F4980D;
 
   --color-white: #fff;
+  --color-secondarywhite: #F6F6F6;
 
   --color-light-gray: #828282;
-  --color-black-gray: #4C4C4C;
+  --color-darken-gray: #4C4C4C;
+  --color-dark-gray: #515151;
 
   --color-secondary-black: #373737;
 }
@@ -19,10 +22,15 @@
   align-items: center;
 }
 
-.title {
+.title, .subtitle {
   font-size: 60px;
   font-weight: 700;
-  color: var(--color-black-gray);
+  color: var(--color-darken-gray);
+}
+
+.secondary-title {
+  color: var(--color-secondary-yellow);
+  font-weight: 700;
 }
 
 .description {
@@ -33,9 +41,10 @@
 
 body {
   position: relative;
+  background-color: var(--color-secondarywhite);
   background-size: 862px 1077px;
   background-position: top right;
-  background-image: url(../imgs/svgs/shape-right.svg);
+  background-image: url(../imgs/shape-right.png);
   background-repeat: no-repeat;
 }
   
@@ -58,16 +67,18 @@ header {
         li {
           margin-right: 40px;
         }
+
         .btn-booking {
           display: flex;
-          background-color: gray;
+          justify-content: center;
+          align-items: center;
+          
           height: 72px;
           width: 218px;
           border-radius: 100px;
-        
+          
           color: var(--color-secondary-black);
-          justify-content: center;
-          align-items: center;
+          background-color: var(--color-white);
         }
       }
   }
@@ -75,9 +86,6 @@ header {
 .section-principal {
 
   .container {
-    display: flex;
-    justify-content: space-between;
-  
     .content {
       display: flex;
       flex-direction: column;
@@ -99,7 +107,7 @@ header {
   }
 }
 
-.btn__primary {
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,8 +118,129 @@ header {
   border-radius: 100px;
   
   font-size: 25px;
-  a {
     color: var(--color-white);
-    margin-right: 20px;
+    font-weight: 700;
+}
+
+.section-about {
+background-image: url(../imgs/shape-left.png);
+background-size: 331px 1052px;
+background-position: left center;
+background-repeat: no-repeat;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 1052px;
+
+    .image {
+      max-width: 50%;
+      padding-right: 60px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 50%;
+
+      .ctas {
+        display: flex;
+        margin-top: 33px;
+
+        a {
+          background-color: var(--color-secondary-yellow);
+        }
+
+        .btn-action {
+          display: flex;
+          align-items: center;
+          margin-left: 75px;
+          font-size: 25px;
+          font-weight: 500;
+          color: var(--color-dark-gray);
+          font-family: "Montserrat", sans-serif;
+
+          .icon {
+            display: block;
+            margin-right: 17px;
+          }
+        }
+      }
+    }
   }
 }
+
+.section-work {
+margin: 100px 0 150px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .list-benefits {
+      margin-top: 80px;
+      display: flex;
+      justify-content: space-between;
+
+      .benefit-item {
+        width: 30%;
+        max-width: 420px;
+        background-color: var(--color-white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px 30px;
+        border-radius: 20px;
+
+        .benefit-title {
+          font-size: 30px;
+          font-weight: 700;
+          margin: 50px 0;
+          color: var(--color-dark-gray);
+        }
+
+        .benefit-description {
+          color: var(--color-secondary-black);
+          font-size: 20px;
+          font-weight: 500;
+          text-align: center;
+        }
+      }
+    }
+
+    .content {
+      width: 717px;
+      text-align: center;
+
+      .subtitle {
+        margin: 35px 0;
+      }
+    }
+  }
+}
+
+/* .section-work {
+margin-top: 231px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  
+  .description__work {
+    color: var(--color-light-gray);
+    max-width: 100%;
+  }
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+      .cards-content {
+        background-color: var(--color-white);
+      }
+    }
+  }
+} */
